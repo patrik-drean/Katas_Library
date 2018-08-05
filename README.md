@@ -122,3 +122,10 @@ def count_smileys(arr):
                 
     
     return count
+    
+    
+<style>
+h2 {
+    color:blue;
+}
+</style>
