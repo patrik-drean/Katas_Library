@@ -1,5 +1,5 @@
 # Katas Library
-Listed below are varying katas to practice. Listed below each set of instructions is my own initial solution to the probelm.
+This readme contain varying katas to practice. Listed below each set of instructions is my own initial solution to the probelm.
 
 <h2>Unique Order</h2>
 <h3>Instructions</h3>
@@ -57,6 +57,7 @@ and a tower of 6 floors looks like below:
 ```
 
 <h3>Solution</h3>
+```
 ```
 def tower_builder(n_floors):
     star_count = 1
