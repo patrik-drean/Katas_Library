@@ -57,9 +57,8 @@ and a tower of 6 floors looks like below:
 ```
 
 <h3>Solution</h3>
-```
-```
-def tower_builder(n_floors):
+
+```def tower_builder(n_floors):
     star_count = 1
     space_count = 1
     tower_output = []
