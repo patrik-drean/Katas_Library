@@ -1,3 +1,10 @@
+<style>
+h2 {
+    color:blue;
+}
+</style>
+
+
 # Katas Library
 This readme contain varying katas to practice. Listed below each set of instructions is my own initial solution to the problem.
 
@@ -122,10 +129,4 @@ def count_smileys(arr):
                 
     
     return count
-    
-    
-<style>
-h2 {
-    color:blue;
-}
-</style>
+```    
