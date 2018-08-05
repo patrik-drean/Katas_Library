@@ -90,8 +90,10 @@ Rules for a smiling face:
 -A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
 -Every smiling face must have a smiling mouth that should be marked with either ) or D.
 No additional characters are allowed except for those mentioned.
+
 Valid smiley face examples:
 :) :D ;-D :~)
+
 Invalid smiley faces:
 ;( :> :} :] 
 
