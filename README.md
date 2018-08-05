@@ -1,5 +1,5 @@
 # Katas Library
-This readme contain varying katas to practice. Listed below each set of instructions is my own initial solution to the probelm.
+This readme contain varying katas to practice. Listed below each set of instructions is my own initial solution to the problem.
 
 <h2>Unique Order</h2>
 <h3>Instructions</h3>
