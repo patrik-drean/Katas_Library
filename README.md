@@ -81,3 +81,42 @@ def tower_builder(n_floors):
     print('tower output: {}'.format(tower_output))
     return tower_output
 ```
+<h2>Count the Smileys</h2>
+<h3>Instructions</h3>
+Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
+
+Rules for a smiling face:
+-Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
+-A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
+-Every smiling face must have a smiling mouth that should be marked with either ) or D.
+No additional characters are allowed except for those mentioned.
+Valid smiley face examples:
+:) :D ;-D :~)
+Invalid smiley faces:
+;( :> :} :] 
+
+<h3>Solution</h3>
+
+```
+def count_smileys(arr):
+    valid_chars = [':', ';', '-', '~', ')', 'D',]
+    count = 0
+    
+    for face in arr:
+        is_eyes = False
+        is_smile = False
+        valid = True
+        
+        for symbol in face:
+            if symbol not in valid_chars:
+                valid = False
+            elif symbol == ':' or symbol == ';':
+                is_eyes = True
+            elif (symbol == ')' or symbol == 'D') and is_eyes and valid:
+                is_smile = True
+                
+            if is_smile and is_eyes:
+                count += 1
+                
+    
+    return count
