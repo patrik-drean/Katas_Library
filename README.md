@@ -201,3 +201,27 @@ def validSolution(board):
             
     return True
 ```
+<h2 align="center">Zeros to the End</h2>
+<h3>Instructions</h3>
+Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
+
+```
+move_zeros([false,1,0,1,2,0,1,3,"a"]) # returns[false,1,1,2,1,3,"a",0,0]
+```
+<h3>Solution</h3>
+```
+def move_zeros(array):
+    return_array = []
+    zero_count = 0
+    
+    for counter in range(len(array)):
+        if array[counter] == 0 and array[counter] is not False:
+            zero_count += 1
+        else:
+            return_array.append(array[counter])
+    
+    for value in range(zero_count):
+        return_array.append(0)
+
+    return return_array
+```
