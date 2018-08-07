@@ -1,7 +1,7 @@
 # Katas Library
 This readme contain varying katas to practice. Listed below each set of instructions is my own initial solution to the problem.
 
-<h2>Unique Order</h2>
+<h2 align="center">Unique Order</h2>
 <h3>Instructions</h3>
 
 Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
