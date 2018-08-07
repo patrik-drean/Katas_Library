@@ -26,7 +26,7 @@ def unique_in_order(iterable):
     return output_list
 ```
 
-<h2>Build Tower</h2>
+<h2 align="center">Build Tower</h2>
 <h3>Instructions</h3>
 
 Build Tower by the following given argument:
@@ -81,7 +81,7 @@ def tower_builder(n_floors):
     print('tower output: {}'.format(tower_output))
     return tower_output
 ```
-<h2>Count the Smileys</h2>
+<h2 align="center">Count the Smileys</h2>
 <h3>Instructions</h3>
 Given an array (arr) as an argument complete the function countSmileys that should return the total number of smiling faces.
 
@@ -123,7 +123,7 @@ def count_smileys(arr):
     
     return count
 ```    
-<h2>Sudoku Checker</h2>
+<h2 align="center">Sudoku Checker</h2>
 <h3>Instructions</h3>
 Sudoku is a game played on a 9x9 grid. The goal of the game is to fill all cells of the grid with digits from 1 to 9, so that each column, each row, and each of the nine 3x3 sub-grids (also known as blocks) contain all of the digits from 1 to 9. 
 (More info at: http://en.wikipedia.org/wiki/Sudoku)
