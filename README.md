@@ -123,7 +123,7 @@ def count_smileys(arr):
     
     return count
 ```    
-<h2 style="color: blue;">Sudoku Checker</h2>
+<h2>Sudoku Checker</h2>
 <h3>Instructions</h3>
 Sudoku is a game played on a 9x9 grid. The goal of the game is to fill all cells of the grid with digits from 1 to 9, so that each column, each row, and each of the nine 3x3 sub-grids (also known as blocks) contain all of the digits from 1 to 9. 
 (More info at: http://en.wikipedia.org/wiki/Sudoku)
@@ -158,6 +158,7 @@ test.assert_equals(validSolution(
 ```
 
 <h3>Solution</h3>
+
 ```
 def validSolution(board):
     first_column = []
