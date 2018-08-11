@@ -227,7 +227,7 @@ def move_zeros(array):
     return return_array
 ```
 
-<h2 align="center">Sudoku Checker</h2>
+<h2 align="center">Build a Square</h2>
 <h3>Instructions</h3>
 I will give you an integer. Give me back a shape that is as long and wide as the integer. The integer will be a whole number between 0 and 50.
 
