@@ -247,6 +247,7 @@ test.assert_equals(generateShape(8), '++++++++\n++++++++\n++++++++\n++++++++\n++
 ```
 
 <h3>Solution</h3>
+
 ```
 def generateShape(int):
     result_string = ''
