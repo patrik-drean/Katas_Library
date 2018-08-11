@@ -226,3 +226,35 @@ def move_zeros(array):
 
     return return_array
 ```
+
+<h2 align="center">Sudoku Checker</h2>
+<h3>Instructions</h3>
+I will give you an integer. Give me back a shape that is as long and wide as the integer. The integer will be a whole number between 0 and 50.
+
+Example: Integer = 3; I expect a 3x3 square back just like below as a string.
+
+Solution:
+
+```
++++
++++
++++
+```
+
+```
+test.assert_equals(generateShape(3), '+++\n+++\n+++')
+test.assert_equals(generateShape(8), '++++++++\n++++++++\n++++++++\n++++++++\n++++++++\n++++++++\n++++++++\n++++++++')
+```
+
+<h3>Solution</h3>
+```
+def generateShape(int):
+    result_string = ''
+    
+    for x in range(int):
+        result_string += ('+' * int) 
+        if (x + 1) != int:
+            result_string += '\n'
+        
+    return result_string
+```
