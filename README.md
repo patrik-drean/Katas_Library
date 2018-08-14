@@ -323,8 +323,7 @@ def accum(s):
     
     for char in s:
         mumbled_string += char.upper()
-        if counter != 0:
-            mumbled_string += (char.lower() * counter)
+        mumbled_string += (char.lower() * counter)
             
         if counter != (len(s) - 1):
             mumbled_string += '-'
@@ -369,3 +368,34 @@ def parse(data):
             
     return result_array
 ```            
+<h2 align="center">Scramblies</h2>
+<h3>Instructions</h3>
+
+Given a sorted array arr of distinct integers, write a function index_equals_value that returns the lowest index i for which arr[i] == i. Return -1 if there is no such index.
+
+Your algorithm should be very performant.
+
+[input] array of integers
+
+[output] integer
+
+Examples:
+
+```
+input: arr = [-8,0,2,5]
+output: 2 # since arr[2] == 2
+
+input: arr = [-1,0,3,6]
+output: -1 # since no index in arr satisfies arr[i] == i.
+```
+
+<h3>Solution</h3>
+
+```
+def index_equals_value(arr):
+    for index, value in enumerate(arr):
+        if index < value:
+            return -1
+        if index == value:
+            return value
+```
