@@ -368,7 +368,7 @@ def parse(data):
             
     return result_array
 ```            
-<h2 align="center">Scramblies</h2>
+<h2 align="center">Index == Value</h2>
 <h3>Instructions</h3>
 
 Given a sorted array arr of distinct integers, write a function index_equals_value that returns the lowest index i for which arr[i] == i. Return -1 if there is no such index.
