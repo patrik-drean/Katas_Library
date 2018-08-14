@@ -334,3 +334,38 @@ def accum(s):
     
     return mumbled_string
 ```
+
+<h2 align="center">Make the Deadfish Swim</h2>
+<h3>Instructions</h3>
+Deadfish has 4 commands, each 1 character long:
+
+i increments the value (initially 0)
+d decrements the value
+s squares the value
+o outputs the value into the return array
+Invalid characters should be ignored.
+
+```
+parse("iiisdoso")  ==>  [8, 64]
+```
+
+<h3>Solution</h3>
+
+```
+def parse(data):
+    value = 0
+    result_array = []
+    
+    for char in data:
+        if char == 'i':
+            value += 1
+        if char == 'd':
+            value += -1
+        if char == 's':
+            value = value**2
+            print(value)
+        if char == 'o':
+            result_array.append(value)
+            
+    return result_array
+```            
