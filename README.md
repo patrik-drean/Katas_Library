@@ -299,3 +299,38 @@ def scramble(s1, s2):
             
     return True
 ```
+
+<h2 align="center">Mumbling</h2>
+<h3>Instructions</h3>
+
+This time no story, no theory. The examples below show you how to write function accum:
+
+Examples:
+
+```
+accum("abcd")    # "A-Bb-Ccc-Dddd"
+accum("RqaEzty") # "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt")    # "C-Ww-Aaa-Tttt"
+```
+The parameter of accum is a string which includes only letters from a..z and A..Z.
+
+<h3>Solution</h3>
+
+```
+def accum(s):
+    mumbled_string = ""
+    counter = 0
+    
+    for char in s:
+        mumbled_string += char.upper()
+        if counter != 0:
+            mumbled_string += (char.lower() * counter)
+            
+        if counter != (len(s) - 1):
+            mumbled_string += '-'
+        
+        counter += 1
+    
+    
+    return mumbled_string
+```
