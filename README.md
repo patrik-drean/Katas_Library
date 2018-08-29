@@ -428,3 +428,28 @@ def century(year):
   
     return century
 ```
+
+<h2 align="center">Twice as Old</h2>
+<h3>Instructions</h3>
+Your function takes two arguments:
+
+current father's age (years)
+current age of his son (years)
+Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old).
+
+```
+Test.assert_equals(twice_as_old(36,7) , 22)
+Test.assert_equals(twice_as_old(55,30) , 5)
+Test.assert_equals(twice_as_old(42,21) , 0)
+```
+
+<h3>Solution</h3>
+
+```
+def twice_as_old(dad_years_old, son_years_old):
+    doubled_sons_age = son_years_old * 2
+    if dad_years_old >= doubled_sons_age:
+        return dad_years_old - doubled_sons_age
+    else:
+        return doubled_sons_age - dad_years_old
+```        
