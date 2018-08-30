@@ -453,3 +453,24 @@ def twice_as_old(dad_years_old, son_years_old):
     else:
         return doubled_sons_age - dad_years_old
 ```        
+
+<h2 align="center">Count Odd Numbers below Number</h2>
+<h3>Instructions</h3>
+Given a number n, return the number of positive odd numbers below n, EASY!
+
+```
+oddCount(7) //=> 3, i.e [1, 3, 5]
+oddCount(15) //=> 7, i.e [1, 3, 5, 7, 9, 11, 13]
+```
+
+Expect large Inputs!
+
+<h3>Solution</h3>
+```
+def odd_count(n):
+    if n % 2 == 1:
+        return (n - 1) / 2
+    else:
+        return n / 2
+```
+
