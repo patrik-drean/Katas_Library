@@ -475,7 +475,7 @@ def odd_count(n):
         return n / 2
 ```
 
-<h2 align="center">TITLE</h2>
+<h2 align="center">Multiples of 3 and 5</h2>
 <h3>Instructions</h3>
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
