@@ -523,3 +523,28 @@ def even_or_odd(number):
         return 'Odd'
 ```
 
+<h2 align="center">Shortest Word</h2>
+<h3>Instructions</h3>
+Simple, given a string of words, return the length of the shortest word(s).
+
+String will never be empty and you do not need to account for different data types.
+
+```
+test.assert_equals(find_short("bitcoin take over the world maybe who knows perhaps"), 3)
+test.assert_equals(find_short("turns out random test cases are easier than writing out basic ones"), 3)
+```
+
+<h3>Solution</h3>
+
+```
+def find_short(s):
+    word_list = s.split()
+    print(word_list)
+    l = -1
+    
+    for word in word_list:
+        if len(word) < l or l == -1:
+            l = len(word)
+        
+    return l # l: shortest word length
+```
