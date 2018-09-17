@@ -548,3 +548,28 @@ def find_short(s):
         
     return l # l: shortest word length
 ```
+
+<h2 align="center">Stop gninnipS My sdroW!</h2>
+<h3>Instructions</h3>
+Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+
+```
+test.assert_equals(spin_words("Welcome"), "emocleW")
+```
+
+<h3>Solution</h3>
+```
+def spin_words(sentence):
+    word_list = sentence.split()
+    finalized_words = []
+    
+    for word in word_list:
+        if len(word) >= 5:
+            updated_word = word[::-1]
+            finalized_words.append(updated_word)
+        else:
+            finalized_words.append(word)
+            
+    
+    return ' '.join(finalized_words)
+```
