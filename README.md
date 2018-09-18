@@ -573,3 +573,25 @@ def spin_words(sentence):
     
     return ' '.join(finalized_words)
 ```
+
+<h2 align="center">CamelCase</h2>
+<h3>Instructions</h3>
+Write simple .camelCase method (camel_case function in PHP, CamelCase in C# or camelCase in Java) for strings. All words must have their first letter capitalized without spaces.
+
+```
+camelcase("hello case") => HelloCase
+camelcase("camel case word") => CamelCaseWord
+```
+
+<h3>Solution</h3>
+```
+def camel_case(string):
+    word_list = string.split()
+    camel_case_string = ""
+    
+    for word in word_list:
+        camel_case_string += word.capitalize()
+    
+    return camel_case_string
+```
+
