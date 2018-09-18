@@ -558,6 +558,7 @@ test.assert_equals(spin_words("Welcome"), "emocleW")
 ```
 
 <h3>Solution</h3>
+
 ```
 def spin_words(sentence):
     word_list = sentence.split()
@@ -584,6 +585,7 @@ camelcase("camel case word") => CamelCaseWord
 ```
 
 <h3>Solution</h3>
+
 ```
 def camel_case(string):
     word_list = string.split()
