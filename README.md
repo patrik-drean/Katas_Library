@@ -597,3 +597,40 @@ def camel_case(string):
     return camel_case_string
 ```
 
+<h2 align="center">Sum Consecutives</h2>
+<h3>Instructions</h3>
+You are given a list/array which contains only integers (positive and negative). Your job is to sum only the numbers that are the same and consecutive. The result should be one list.
+
+Extra credit if you solve it in one line. You can asume there is never an empty list/array and there will always be an integer.
+
+Same meaning: 1 == 1
+
+[1,4,4,4,0,4,3,3,1] # should return [1,12,0,4,6,1]
+
+<h3>Solution</h3>
+
+```
+def sum_consecutives(s):
+    final_list = []
+    last_digit = s[0]
+    count = 0
+    
+    for index, digit in enumerate(s):
+        if digit == last_digit:
+            count += 1
+        else:
+            final_list.append(count * last_digit)
+            count = 1
+                     
+        if index == len(s) - 1:            
+            if digit == last_digit:
+                final_list.append(count * digit)
+            else:
+                final_list.append(digit)
+
+            
+        last_digit = digit
+        
+    return final_list
+
+```
