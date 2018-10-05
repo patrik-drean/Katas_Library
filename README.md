@@ -672,3 +672,67 @@ def is_square(n):
 
 ```
 
+<h2 align="center">Duck, Duck, Goose (C#)</h2>
+<h3>Instructions</h3>
+The objective of 'Duck, duck, goose' is to walk in a circle, tapping on each player's head until one is finally chosen. 
+
+Task: Given an array of Player objects and an index (1-based), return the name of the chosen Player. 
+
+```
+using NUnit.Framework;
+using System;
+using System.Linq;
+
+namespace Solution 
+{
+   [TestFixture]
+  public class PlayerTests
+  {
+    [TestCase(1,  "a")]
+    [TestCase(3,  "c")]
+    [TestCase(11,  "a")]
+    [TestCase(14,  "d")]
+
+    public void DuckDuckGooseTests(int goose, string expectedName)
+    {
+      var exampleNames = new string[] {"a", "b", "c", "d", "c", "e", "f", "g", "h", "z"};
+      var players = exampleNames.Select(x=>new Player(x)).ToArray();
+      string userAns = Kata.DuckDuckGoose(players,goose);
+      Assert.AreEqual(expectedName, userAns);
+    }
+  }
+  
+  
+}
+```
+
+<h3>Solution</h3>
+
+```
+using System;
+
+public class Kata
+{
+  public static string DuckDuckGoose(Player[] players, int goose)
+  {   
+    int goose_pos = goose - 1;
+    
+    if (goose_pos >= players.Length)
+    {
+      goose_pos = goose_pos % players.Length;
+    }
+    
+    return players[goose_pos].Name;
+  }
+}
+public class Player 
+{
+  public string Name {get;set;}
+  
+  public Player (string name) 
+  {
+	  this.Name = name;
+  }
+}
+```
+
