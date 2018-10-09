@@ -736,3 +736,56 @@ public class Player
 }
 ```
 
+<h2 align="center">High Number (C#)</h2>
+<h3>Instructions</h3>
+Given 3 integers, write the code to return the largest product of them. Remember to consider negative integers in writing the solution.  
+
+```
+using System;
+using NUnit.Framework;
+
+[TestFixture]
+public static class AccumulTests 
+{
+
+    private static void testing(int actual, int expected) 
+    {
+        Assert.AreEqual(expected, actual);
+    }
+
+[Test]
+    public static void test1() 
+    {
+      int[] numbers = new int[]{2,1,0};
+      testing(Accumul.Accum(numbers), 2);
+        
+    }
+}
+```
+
+<h3>Solution</h3>
+
+```
+using System;
+
+public class Accumul 
+{
+	public static int Accum(int[] numbers) 
+  {
+    int high_num = numbers[0];
+    
+    foreach (int num in numbers) 
+    {
+       if (num > high_num) 
+       {
+         high_num = num;
+       }
+    }
+  
+    return high_num;
+  }
+}
+```
+
+
+
