@@ -787,5 +787,53 @@ public class Accumul
 }
 ```
 
+<h2 align="center">Return Negative (C#)</h2>
+<h3>Instructions</h3>
+In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+```
+using NUnit.Framework;
+
+[TestFixture]
+public class Tests
+{
+  [Test]
+  public void PositiveToNegative()
+  {
+    Assert.AreEqual(-42, Kata.MakeNegative(42));
+  }
+    [Test]
+  public void NegativeToNegative()
+  {
+    Assert.AreEqual(-42, Kata.MakeNegative(-42));
+  }
+}
+```
+
+<h3>Solution</h3>
+
+```
+using System;
+
+public static class Kata
+{
+  public static int MakeNegative(int number)
+  {
+    if (number > 0)
+    {
+      return number - (number * 2);
+    }
+    else if (number < 0 )
+    {
+      return number;
+    }
+    else
+    {
+      return 0;
+    }
+    
+  }
+}
+```
 
 
