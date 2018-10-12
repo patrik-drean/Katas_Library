@@ -889,3 +889,68 @@ public class Kata
 }
 
 ```
+
+<h2 align="center">Find the odd counted int (C#)</h2>
+<h3>Instructions</h3>
+Given an array, find the int that appears an odd number of times.
+
+There will always be only one integer that appears an odd number of times.
+
+```
+namespace Solution {
+  using NUnit.Framework;
+  using System;
+
+  [TestFixture]
+  public class SolutionTest
+  {
+    [Test]
+    public void Tests()
+    {
+      Assert.AreEqual(5 , Kata.find_it ( new[] { 20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5 }));
+    }
+  }
+}
+```
+
+<h3>Solution</h3>
+
+```
+using System.Collections.Generic;
+using System.Linq;
+using System;
+
+namespace Solution
+{
+  class Kata
+    {
+    public static int find_it(int[] seq) 
+      {
+        var values = new List<List<int>>();
+
+        foreach (int num in seq) 
+        {
+          bool numberAddedAlready = false;
+          
+          foreach (var listOfSameNumber in values)
+          {
+            if (num == listOfSameNumber[0]) 
+            {
+              listOfSameNumber.Add(num);
+              numberAddedAlready = true;
+            }
+          }
+          
+          if (! numberAddedAlready )
+          {
+            values.Add(new List<int> {num});
+          }
+        }
+        
+        return (values.Where(x => x.Count() % 2 == 1)).ToList()[0][0];
+      }
+       
+    }
+}
+```
+
