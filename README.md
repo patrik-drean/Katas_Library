@@ -837,3 +837,55 @@ public static class Kata
 ```
 
 
+<h2 align="center">Sum of Positive (C#)</h2>
+<h3>Instructions</h3>
+You get an array of numbers, return the sum of all of the positives ones.
+
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+Note: if there is nothing to sum, the sum is default to 0.
+
+```
+using NUnit.Framework;
+using System;
+
+[TestFixture]
+public class Tests
+{
+  [Test]
+  [TestCase(new int[]{1, 2, 3, 4, 5}, ExpectedResult=15)]
+  [TestCase(new int[]{1, -2, 3, 4, 5}, ExpectedResult=13)]
+  [TestCase(new int[]{-1, 2, 3, 4, -5}, ExpectedResult=9)]
+  [TestCase(new int[]{}, ExpectedResult=0)]
+  [TestCase(new int[]{-1, -2, -3, -4, -5}, ExpectedResult=0)]
+  public static int ExampleTest(int[] arr)
+  {
+    return Kata.PositiveSum(arr);
+  }
+}
+```
+
+<h3>Solution</h3>
+
+```
+using System;
+
+public class Kata
+{
+  public static int PositiveSum(int[] arr)
+  {
+    int sum = 0;
+    
+    foreach (int num in arr) 
+    {
+      if (num > 0) 
+      {
+        sum += num;
+      }
+    }
+    
+    return sum;
+  }
+}
+
+```
