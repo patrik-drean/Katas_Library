@@ -1026,3 +1026,78 @@ public class DigPow {
 }
 ```
 
+<h2 align="center">Tribonacci Sequence</h2>
+<h3>Instructions</h3>
+Well met with Fibonacci bigger brother, AKA Tribonacci.
+
+As the name may already reveal, it works basically like a Fibonacci, but summing the last 3 (instead of 2) numbers of the sequence to generate the next. And, worse part of it, regrettably I won't get to hear non-native Italian speakers trying to pronounce it :(
+
+So, if we are to start our Tribonacci sequence with [1, 1, 1] as a starting input (AKA signature), we have this sequence:
+
+[1, 1 ,1, 3, 5, 9, 17, 31, ...]
+
+
+```
+using NUnit.Framework;
+
+[TestFixture]
+public class XbonacciTest
+{
+  private Xbonacci variabonacci;
+  
+  [SetUp]
+  public void SetUp() 
+  {
+    variabonacci = new Xbonacci();
+  }
+
+  [TearDown]
+  public void TearDown()
+  {
+    variabonacci = null;
+  }
+
+  [Test]
+  public void Tests()
+  {
+    Assert.AreEqual(new double []{1,1,1,3,5,9,17,31,57,105}, variabonacci.Tribonacci(new double []{1,1,1},10));
+    Assert.AreEqual(new double []{0,0,1,1,2,4,7,13,24,44}, variabonacci.Tribonacci(new double []{0,0,1},10));
+    Assert.AreEqual(new double []{0,1,1,2,4,7,13,24,44,81}, variabonacci.Tribonacci(new double []{0,1,1},10));
+  }
+}
+```
+
+<h3>Solution</h3>
+
+```
+using System;
+using System.Collections.Generic;
+
+public class Xbonacci
+{
+  public double[] Tribonacci(double[] signature, int n)
+  {
+    double first_value = signature[0];
+    double second_value = signature[1];
+    double third_value = signature[2];
+    
+    double[] final_sequence = new double[n];
+    final_sequence[0] = first_value;
+    final_sequence[1] = second_value;
+    final_sequence[2] = third_value;
+    
+    for (int x = 3; x < n ; x++) 
+    {
+      double summed_value = first_value + second_value + third_value;
+      final_sequence[x] = summed_value;
+      
+      first_value = second_value;
+      second_value = third_value;
+      third_value = summed_value;
+    }
+    
+    return final_sequence;
+    
+  }
+}
+```
