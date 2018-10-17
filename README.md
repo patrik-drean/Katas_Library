@@ -1101,3 +1101,54 @@ public class Xbonacci
   }
 }
 ```
+
+<h2 align="center">Reverse Words in a Phrase (C#)</h2>
+<h3>Instructions</h3>
+Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+```
+namespace Solution
+{
+  using NUnit.Framework;
+  
+  [TestFixture]
+  public class Tests
+  {
+    [Test]
+    public void Example()
+    {
+      Assert.AreEqual("sihT si na !elpmaxe", Kata.ReverseWords("This is an example!"));
+    }
+  }
+}
+```
+
+<h3>Solution</h3>
+
+```
+using System;
+using System.Collections.Generic;
+
+public static class Kata
+{
+  public static string ReverseWords(string str)
+  {
+    var splitWords = str.Split(" ");
+    var reversedSplitWords = new List<string>();
+    
+    foreach (string word in splitWords)
+    {
+      string reversedString = "";
+      
+      for (int x = word.Length - 1; x >= 0 ; x--) 
+      {
+        reversedString += word[x].ToString();
+      }
+      
+      reversedSplitWords.Add(reversedString);
+    }
+    
+    return string.Join(" ", reversedSplitWords);
+  }
+}
+```
