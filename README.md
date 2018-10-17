@@ -1152,3 +1152,53 @@ public static class Kata
   }
 }
 ```
+
+<h2 align="center">Find the next perfect square (C#)</h2>
+<h3>Instructions</h3>
+You might know some pretty large perfect squares. But what about the NEXT one?
+
+Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
+
+If the parameter is itself not a perfect square, than -1 should be returned. You may assume the parameter is positive.
+
+```
+using NUnit.Framework;
+using System;
+
+[TestFixture]
+public class Tests
+{
+  [Test]
+  [TestCase(155, ExpectedResult=-1)]
+  [TestCase(121, ExpectedResult=144)]
+  [TestCase(625, ExpectedResult=676)]
+  [TestCase(319225, ExpectedResult=320356)]
+  [TestCase(15241383936, ExpectedResult=15241630849)]
+  public static long FixedTest(long num)
+  {
+    return Kata.FindNextSquare(num);
+  }
+}
+```
+
+<h3>Solution</h3>
+
+```
+using System;
+
+public class Kata
+{
+  public static long FindNextSquare(long num)
+  {
+    double squareRootedValue = Math.Sqrt(num);
+    if (squareRootedValue % 1 == 0) 
+    {
+      return (long) Math.Pow((squareRootedValue + 1), 2);
+    }
+    else
+    {
+      return -1;
+    }
+  }
+}
+```
